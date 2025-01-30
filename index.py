@@ -1,6 +1,6 @@
 import pyttsx3 as p
 import speech_recognition as sr # speech to text
-from selenium_web import infow
+from selenium_web import Inflow
 engine = p.init()
 rate = engine.getProperty("rate")
 engine.setProperty('rate',130)
@@ -52,6 +52,7 @@ with sr.Microphone() as source:
     audio = r.listen(source, timeout=10)
 
 # Try recognizing the speech
+text2=""
 try:
     text2 = r.recognize_google(audio)
     print("You said:", text2)
@@ -83,7 +84,7 @@ if "information" in text2:
         infor_query = ""
 
 
-    # # Run the script
-    # assist = infow()
+    # Run the script
+    # assist = Inflow()
     # assist.getinfo(infor_query)
 
