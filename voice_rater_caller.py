@@ -11,7 +11,7 @@ analyzer = VoiceRatingAnalyzer(
 )
 
 # Record and analyze voice
-results = analyzer.analyze_voice(duration=5)
+results = analyzer.analyze_voice(duration=10)
 
 # Print detailed results
 print(f"Overall Score: {results['overall_score']:.1f}/100\n")
